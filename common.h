@@ -4,6 +4,8 @@
 
 #include "spdlog/spdlog.h"
 
+#undef NDEBUG
+
 #define Info(...)              \
   do {                         \
     spdlog::info(__VA_ARGS__); \

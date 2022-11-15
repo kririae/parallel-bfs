@@ -13,9 +13,9 @@ def main(argv):
     in_graph = argv[1]
     out_mm = argv[2]
     fh = io.BytesIO()
-    G = nx.read_edgelist(in_graph, create_using=nx.DiGraph(), nodetype=int)
-    print(G.number_of_nodes())
-    m = nx.to_scipy_sparse_array(G)
+    G = nx.read_edgelist(in_graph, create_using=nx.Graph(), nodetype=int)
+    print('read finished')
+    m = nx.to_scipy_sparse_array(G, format='coo')
     sp.io.mmwrite(fh, m)
     with open(out_mm, 'wb') as f:
         f.write(fh.getbuffer())

@@ -1,5 +1,6 @@
 .cache/
 graph/
+PaRMAT/
 bfs
 compile_commands.json
 flamegraph.svg
