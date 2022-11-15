@@ -1,0 +1,8 @@
+.cache/
+graph/
+bfs
+compile_commands.json
+flamegraph.svg
+*.o
+perf.data
+perf.data.old
