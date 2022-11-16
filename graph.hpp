@@ -44,6 +44,7 @@ public:
   }
 
   FORCEINLINE void add_edge(int u, int v) override {
+    num_edges += 2;
     m_graph[u].push_back(v);
     m_graph[v].push_back(u);
   }
@@ -127,7 +128,6 @@ inline void GraphFromMM(const std::string &filename, Graph &G) {
 
   Info("{}", G.m_graph.size());
   G.post_processing();
-  G.num_edges = L;
   fclose(ifile);
   delete[] line;
 }
@@ -157,7 +157,6 @@ inline void GraphFromTxt(const std::string &filename, Graph &G,
   Info("adding edges");
   for (const auto &edge : edges) G.add_edge(edge.first, edge.second);
 
-  G.num_edges = edges.size();
   edges.clear();
   edges.shrink_to_fit();
 

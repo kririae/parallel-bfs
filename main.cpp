@@ -53,6 +53,9 @@ int main(int argc, char **argv) {
     case 1:
       BfsBottomUp(G, source_node, sol);
       break;
+    case 2:
+      BfsHybrid(G, source_node, sol);
+      break;
     default:
       Error("no bfs method exists");
       exit(-1);
