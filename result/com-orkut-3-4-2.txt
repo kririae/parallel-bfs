@@ -1,0 +1,16 @@
+% reading graph/com-orkut.ungraph.txt
+% read finished
+% adding edges
+% post processing
+% topdown 0: 0.0020
+% topdown 1: 0.0310
+% topdown 2: 1.7020
+% topdown 3: 35.7900
+% bottomup 4: 25.5940
+% bottomup 5: 6.8640
+% topdown 6: 0.6710
+% Time: 77.652 ms
+% num_nodes: 3072627
+% num_edges: 234370166
+% MTEPS: 3018.2116
+77.6520 3018.2116

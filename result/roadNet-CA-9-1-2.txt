@@ -1,0 +1,8 @@
+% reading graph/roadNet-CA.mm
+% 1965206 1965206 2766607
+% 1965207
+% Time: 81.137 ms
+% num_nodes: 1965207
+% num_edges: 5533214
+% MTEPS: 68.1959
+81.1370 68.1959

@@ -44,6 +44,7 @@ public:
   }
 
   FORCEINLINE void add_edge(int u, int v) override {
+    if (u == v) return;
     num_edges += 2;
     m_graph[u].push_back(v);
     m_graph[v].push_back(u);

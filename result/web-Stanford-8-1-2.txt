@@ -1,0 +1,8 @@
+% reading graph/web-Stanford.mm
+% 281903 281903 2312497
+% 281904
+% Time: 17.569 ms
+% num_nodes: 281904
+% num_edges: 4624994
+% MTEPS: 263.2474
+17.5690 263.2474

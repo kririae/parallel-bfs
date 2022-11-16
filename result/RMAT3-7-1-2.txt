@@ -1,0 +1,16 @@
+% reading graph/RMAT3.txt
+% read finished
+% adding edges
+% post processing
+% topdown 0: 0.5540
+% bottomup 1: 181.9700
+% bottomup 2: 102.2530
+% bottomup 3: 50.7220
+% topdown 4: 1.9240
+% topdown 5: 0.0100
+% topdown 6: 0.0000
+% Time: 354.224 ms
+% num_nodes: 9999438
+% num_edges: 200000000
+% MTEPS: 564.6145
+354.2240 564.6145

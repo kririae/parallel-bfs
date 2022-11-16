@@ -1,0 +1,21 @@
+% reading graph/soc-LiveJournal1.mm
+% 4847571 4847571 43369619
+% 4847572
+% topdown 0: 0.0040
+% topdown 1: 0.2760
+% topdown 2: 7.0830
+% bottomup 3: 33.9000
+% bottomup 4: 18.3150
+% bottomup 5: 10.8190
+% topdown 6: 2.3170
+% topdown 7: 0.1720
+% topdown 8: 0.0200
+% topdown 9: 0.0050
+% topdown 10: 0.0020
+% topdown 11: 0.0010
+% topdown 12: 0.0010
+% Time: 86.397 ms
+% num_nodes: 4847572
+% num_edges: 85702474
+% MTEPS: 991.9612
+86.3970 991.9612

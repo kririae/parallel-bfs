@@ -10,7 +10,7 @@
 #include "common.h"
 #include "graph.hpp"
 
-// #define VERBOSE
+#define VERBOSE
 constexpr int NOT_VISITED = -1;
 
 /**
@@ -75,7 +75,7 @@ inline std::size_t BfsTopDownStep(const Graph &G, Frontier *frontier,
   return num_checked_edges;
 }
 
-inline void BfsTopDown(const Graph &G, int source_node, Solution &sol) {
+inline std::size_t BfsTopDown(const Graph &G, int source_node, Solution &sol) {
   // init distance
   auto &distance = sol.distance;
   auto &parent   = sol.parent;
@@ -97,6 +97,8 @@ inline void BfsTopDown(const Graph &G, int source_node, Solution &sol) {
   frontier->push_back(source_node);
   distance[source_node] = 0;
 
+  std::size_t num_checked_edges = 0;
+
   int it = 0;
   while (!frontier->empty()) {
     // traverse the frontier
@@ -107,7 +109,7 @@ inline void BfsTopDown(const Graph &G, int source_node, Solution &sol) {
 #endif
 
     // The actual step
-    auto num_checked_edges =
+    num_checked_edges +=
         BfsTopDownStep(G, frontier, new_frontier, thread_frontiers, sol);
 
 #ifdef VERBOSE
@@ -123,6 +125,7 @@ inline void BfsTopDown(const Graph &G, int source_node, Solution &sol) {
 
   delete frontier;
   delete new_frontier;
+  return num_checked_edges;
 }
 
 inline int parallel_collect(int *select, int *out_indices, int n) {
@@ -236,7 +239,7 @@ inline void BfsBottomUp(const Graph &G, int source_node, Solution &sol) {
   delete new_frontier;
 }
 
-inline void BfsHybrid(const Graph &G, int source_node, Solution &sol) {
+inline std::size_t BfsHybrid(const Graph &G, int source_node, Solution &sol) {
   // https://scottbeamer.net/pubs/beamer-sc2012.pdf
   // m_f: number of edges from the frontier
   // n_f: number of vertices in the frontier
@@ -325,4 +328,5 @@ step_end:
 
   delete frontier;
   delete new_frontier;
+  return num_checked_edges;
 }

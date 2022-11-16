@@ -72,7 +72,7 @@ int main(int argc, char **argv) {
   printf("%.4f %.4f\n", exe_time, MTEPS);
 
 #if 0
-  for (std::size_t i = 1; i < sol.distance.size(); ++i) 
-    std::cout << sol.distance[i] << std::endl;
+  for (std::size_t i = 1; i < sol.distance.size(); ++i)
+    std::cout << i << " " << sol.distance[i] << std::endl;
 #endif
 }

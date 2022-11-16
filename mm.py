@@ -19,6 +19,9 @@ def main(argv):
     sp.io.mmwrite(fh, m)
     with open(out_mm, 'wb') as f:
         f.write(fh.getbuffer())
+    # with open('test.txt', 'w') as f:
+    #     for i, j in length.items():
+    #         f.write(f'{i} {j}\n')
 
 
 if __name__ == '__main__':
